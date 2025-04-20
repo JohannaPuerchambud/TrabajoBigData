@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(page_title="Detección de Números", layout="centered")
 
 # Título
-st.title("🧠 IA - Detección de Números (MNIST)")
+st.title("🧠 Big Data - Detección de Números (MNIST)")
 
 # Cargar modelo
 @st.cache_resource
