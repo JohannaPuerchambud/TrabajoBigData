@@ -150,7 +150,7 @@ print("\nactual digit: ", y_test[0], " predicted: ", prediction.argmax())
 
 
 # Test it on an image available on PC (current folder)
-im = imageio.imread("a3Rql9C.png")
+im = imageio.imread("imagen.jpeg")
 #visualize image
 gray = np.dot(im[...,:3], [0.299, 0.587, 0.114])
 plt.imshow(gray, cmap = plt.get_cmap('gray'))
@@ -162,8 +162,8 @@ gray = gray.reshape(1, 28, 28, 1)
 gray /= 255
 
 prediction = model.predict(gray.reshape(1, 28, 28, 1))
-print("predicted number (png): ", prediction.argmax())
+print("predicted number: ", prediction.argmax())
 
 # save model and architecture to single file
-# model.save("model_Mnist_LeNet.h5")
+model.save("model_Mnist_LeNet.h5")
 # print("Saved model to disk")
