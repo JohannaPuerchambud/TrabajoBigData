@@ -16,7 +16,7 @@ def load_cnn_model():
 model = load_cnn_model()
 
 # Subir imagen
-uploaded_file = st.file_uploader("📤 Sube una imagen (28x28px, fondo blanco)", type=["png", "jpg", "jpeg"])
+uploaded_file = st.file_uploader("📤 Sube una imagen (fondo blanco)", type=["png", "jpg", "jpeg"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("L")  # Escala de grises
