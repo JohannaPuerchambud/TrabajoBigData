@@ -22,7 +22,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("L")  # Escala de grises
 
     # Mostrar imagen
-    st.image(image, caption="🖼 Imagen cargada", use_column_width=True)
+    st.image(image, caption="🖼 Imagen cargada", use_container_width=True)
 
     # Preprocesar
     image_resized = ImageOps.invert(image).resize((28, 28))
